@@ -1,0 +1,19 @@
+{
+  "name": "zendesk-coding-challenge",
+  "version": "1.0.0",
+  "description": "Zendesk Coding Challenge",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaazii/zendesk-coding-challenge.git"
+  },
+  "author": "Uwais Kazi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaazii/zendesk-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/kaazii/zendesk-coding-challenge#readme"
+}
