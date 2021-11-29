@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kaazii/zendesk-coding-challenge/issues"
   },
-  "homepage": "https://github.com/kaazii/zendesk-coding-challenge#readme"
+  "homepage": "https://github.com/kaazii/zendesk-coding-challenge#readme",
+  "dependencies": {
+    "node-fetch": "^3.1.0"
+  }
 }
