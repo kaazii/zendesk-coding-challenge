@@ -103,8 +103,5 @@ dist
 # TernJS port file
 .tern-port
 
-# config file
-config.json
-
 # a file where I make notes on commands that I use regularly
 shell commands.txt
