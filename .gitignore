@@ -103,5 +103,8 @@ dist
 # TernJS port file
 .tern-port
 
-# a file where I make notes on commands that I use regularly
-shell commands.txt
+# a file where I make notes on commands that I use regularly, and any personal notes
+notes.txt
+
+# env file containing tokens
+.env
