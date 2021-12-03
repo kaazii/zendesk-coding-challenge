@@ -5,7 +5,7 @@ This is my submission for the 2021 Zendesk Coding Challenge. I chose to use Node
 Zendesk is a company that focuses on customer service. From my understanding, if you have a domain with zendesk, customers can submit tickets with issues that they may be facing. That's where their API comes in. I got my own domain and populated it with dummy tickets. Then, I use their API to fetch those tickets and allow users to interact with them.
 
 # Task
-For this program, I needed familiar with the Zendesk API. The requirements are pretty straight forward:
+For this challenge, I needed to get familiar with the Zendesk API. The requirements are pretty straight forward:
 - Connect to the Zendesk API
 - Request all the tickets for your account
 - Display them in a list
