@@ -1,5 +1,5 @@
 import readline from 'readline'
-import { retrieveTickets } from './api/zendesk.js'
+import { retrieveSpecificTicket, retrieveTickets } from './api/zendesk.js'
 import dotenv from 'dotenv'
 const result = dotenv.config() 
 
@@ -12,21 +12,19 @@ const rl = readline.createInterface({
     output: process.stdout
 })
 
-
 function getInput() { 
-    rl.question("Please Choose an option:\n"
+    rl.question("\nPlease Choose an option:\n"
         + "1) Retrieve all tickets\n"
         + "2) Retrieve a specific ticket\n"
         + "3) Exit\n"
-        , function (line) {
+        , async function (line) {
 
             switch (line){
                 case "1":
-                    console.log("this is option 1\n");
-                    retrieveTickets()
+                    await retrieveTickets()
                     break;
                 case "2":
-                    console.log("this is option 2\n");
+                    await retrieveSpecificTicket()
                     break;
                 case "3":
                     return rl.close();
@@ -38,4 +36,4 @@ function getInput() {
     });
 };
 
-getInput(); 
+getInput()
