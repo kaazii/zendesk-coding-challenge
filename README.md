@@ -15,7 +15,7 @@ For this challenge, I needed to become familiar with the Zendesk API. The requir
 
 Furthermore, I had the opportunity to choose between a UI that is browser-based, or CLI - I chose the latter.
 
-# What software versions I used
+# Software Versions
  - Node.js version 16.13.1 
  - NPM version 8.1.2
 
