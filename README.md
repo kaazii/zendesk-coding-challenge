@@ -34,7 +34,7 @@ $ npm start
 ```
 4. Finally, to test the program:
 ```
-npm test
+$ npm test
 ```
 # File Structure
 - `app.js` This is the 'main' of the program. It retrieves input from the users, and passes it to relative functions.
