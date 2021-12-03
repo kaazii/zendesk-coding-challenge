@@ -12,6 +12,7 @@ For this challenge, I needed to become familiar with the Zendesk API. The requir
 - Display individual ticket details
 - Page through tickets when more than 25 are returned
 - Write tests that cover my code
+Further
 
 # What software versions I used
  - Node.js version 16.x or later
@@ -41,6 +42,6 @@ npm test
 - `formatter.js` Finally, this file is responsible for parsing the tickets and outputting them to the console.
 
 # Conclusion
-I am very proud of myself for how far I got in this project. I used a language that I am not familiar with, and was able to come up with something that satisfied *most* of the requirements. I feel that I could have done a lot better with making my code more testable from the get-go. However, I will take this as a learning experience and try to improve on my coding skills. I will definitely be continuing to code in Node.js! 
+I am extremely proud of how far I got in this project. I chose a language that I was not familiar with, and was able to create a program that satisfied *most* of the requirements. I feel that I could have done a lot better with making my code more testable from the get-go. However, I will take this as a learning experience and try to improve on my coding skills going forward. I will definitely be continuing to code in Node.js! 
 
-I thoroughly enjoyed this experience! Thank you so much for this opportunity, Zendesk.
+Thank you Zendesk for this opportunity, I thoroughly enjoyed this experience!
