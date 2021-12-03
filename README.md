@@ -35,9 +35,9 @@ $ npm start
 npm test
 ```
 # File Structure
-- `app.js` This is the 'main' of my program. I ask users for initial input here, and pass that to relative functions.
-- `util.js` This is where I store functions that get input from users, as well as the function that calls the API.
-- `zendesk.js` This is a sort of middle man where I take the output from the API call, and pass it to the module that will process it.
+- `app.js` This is the 'main' of the program. It retrieves input from the users, and passes it to relative functions.
+- `util.js` This is where functions that are used repeatedly are stores. One receives input from users, the other fetches tickets from the Zendesk API.
+- `zendesk.js` This is a sort of middle man where the output from the API call is passed on to the module that will process it.
 - `formatter.js` Finally, this file is responsible for parsing the tickets and outputting them to the console.
 
 # Conclusion
