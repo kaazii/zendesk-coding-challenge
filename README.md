@@ -17,7 +17,7 @@ Furthermore, I had the opportunity to choose between a UI that is browser-based,
 
 # What software versions I used
  - Node.js version 16.13.1 
- - NPM version 8.1.2 \
+ - NPM version 8.1.2
 
 # How to run
 1. Clone this repository using:
