@@ -35,10 +35,10 @@ $ npm start
 npm test
 ```
 # File Structure
-app.js: This is the 'main' of my program. I ask users for initial input here, and pass that to relative functions.
-util.js: This is where I store functions that get input from users, as well as the function that calls the API.
-zendesk.js: This is a sort of middle man where I take the output from the API call, and pass it to the module that will process it.
-formatter.js: Finally, this file is responsible for parsing the tickets and outputting them to the console.
+`app.js` This is the 'main' of my program. I ask users for initial input here, and pass that to relative functions.
+`util.js` This is where I store functions that get input from users, as well as the function that calls the API.
+`zendesk.js` This is a sort of middle man where I take the output from the API call, and pass it to the module that will process it.
+`formatter.js` Finally, this file is responsible for parsing the tickets and outputting them to the console.
 
 # Conclusion
 I am very proud of myself for how far I got in this project. I used a language that I am not familiar with, and was able to come up with something that satisfied *most* of the requirements. I feel that I could have done a lot better with making my code more testable from the get-go. However, I will take this as a learning experience and try to improve on my coding skills. I wil definitely be continuing to code in Node.js! I thoroughly enjoyed this experience. Thank you for this opportunity, Zendesk.
