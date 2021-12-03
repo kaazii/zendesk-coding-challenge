@@ -1,60 +1,32 @@
-import fetch from 'node-fetch'
 import { formatTicket, formatAllTickets } from '../display/formatter.js'
+import { zendeskFetch } from '../util/util.js'
 
-export const retrieveTickets = async function () {
-    const authenticator = `${process.env.EMAIL}/token:${process.env.TOKEN}`
-
-    const response = await fetch(`https://${process.env.SUBDOMAIN}.zendesk.com/api/v2/tickets.json?page=1&per_page=25`, {
-        method: 'GET',
-        headers: { 'Authorization': 'Basic ' + Buffer.from(authenticator).toString('base64') }
-    })
-
-    const output = await response.json()
-
-    if (output.error) {
-        console.log("\n" + output.error)
-        return;
+export const retrieveTickets = async function (apiFetch = zendeskFetch) {
+    const url = `tickets.json?page=1&per_page=25`
+    const { output, error } = await apiFetch(url)
+    if (!error)
+        await formatAllTickets(output)
+    else {
+        console.log(error)
     }
-
-    await formatAllTickets(output)
 }
 
-export const retrieveTicketsSpecificPage = async function (page) {
-    const authenticator = `${process.env.EMAIL}/token:${process.env.TOKEN}`
-
-    const response = await fetch(`https://${process.env.SUBDOMAIN}.zendesk.com/api/v2/tickets.json?page=${page}&per_page=25`, {
-        method: 'GET',
-        headers: { 'Authorization': 'Basic ' + Buffer.from(authenticator).toString('base64') }
-    })
-
-    const output = await response.json()
-
-    if (output.error) {
-        console.log("\n" + output.error)
-        return;
-    }
-
-    return output
+export const retrieveTicketsSpecificPage = async function (page, apiFetch = zendeskFetch) {
+    const url = `tickets.json?page=${page}&per_page=25`
+    const { output, error } = await apiFetch(url)
+    if (!error)
+        return output;
 }
 
-export const retrieveSpecificTicket = async function (id) {
-    if (id < 0){
-        console.log("\n ID must be a positive number!")
-        return;
+export const retrieveSpecificTicket = async function (id, apiFetch = zendeskFetch) {
+    if (id < 0) {
+        return ('\nID must be greater than 0!')
     }
-    const authenticator = `${process.env.EMAIL}/token:${process.env.TOKEN}`
-
-    const response = await fetch(`https://${process.env.SUBDOMAIN}.zendesk.com/api/v2/tickets/${id}.json`, {
-        method: 'GET',
-        headers: { 'Authorization': 'Basic ' + Buffer.from(authenticator).toString('base64') }
-    })
-
-    const output = await response.json()
-
-    if (output.error) {
-        console.log("\n" + output.error)
-        return;
+    const url = `tickets/${id}.json`;
+    const { output, error } = await apiFetch(url)
+    if (!error)
+        return formatTicket(output);
+    else {
+        return error;
     }
-
-    formatTicket(output)
 }
