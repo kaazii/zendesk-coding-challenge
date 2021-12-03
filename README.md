@@ -9,3 +9,12 @@ For this program, I need to be get familiar with the Zendesk API. The requiremen
 - Display individual ticket details
 - Page through tickets when more than 25 are returned
 - Write tests that cover my code
+
+# What software versions I used
+ - Node.js version 16.x or later
+ - NPM version 8.x or later
+
+# How to run
+```
+  npm install
+```
