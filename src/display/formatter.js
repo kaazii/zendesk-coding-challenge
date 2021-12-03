@@ -22,7 +22,7 @@ export const formatAllTickets = async function (allTickets) {
                 console.log("\n No more pages!")
             }
                 break;
-            case "2": if (currPage > 0) {
+            case "2": if (currPage > 1) {
                 const prevPageTickets = await retrieveTicketsSpecificPage(--currPage)
                 printTickets(prevPageTickets)
             }
