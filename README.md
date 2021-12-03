@@ -18,6 +18,19 @@ For this program, I need to be get familiar with the Zendesk API. The requiremen
  - NPM version 8.x or later
 
 # How to run
+1. clone this repository using
 ```
-  npm install
+ $ git clone https://github.com/kaazii/zendesk-coding-challenge
+```
+2. run this command to automatically install of the modules
+```
+$ npm install
+```
+3. to run the program
+```
+$ npm start
+```
+4. finally to test the program
+```
+npm test
 ```
