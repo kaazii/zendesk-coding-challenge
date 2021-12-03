@@ -1,31 +1,57 @@
+import { retrieveTicketsSpecificPage } from "../api/zendesk.js"
+import { getInput } from '../util/util.js'
 
-export const formatAllTickets = function (tickets) {
-    const numPages = Math.ceil(tickets.count/25)
-    const numTickets = tickets.count
+export const formatAllTickets = async function (allTickets) {
+    const numPages = Math.ceil(allTickets.count / 25)
+    const numTickets = allTickets.count
+    var currPage = 1;
 
-    for (var i = 0; i < 1; i++){
-        printTickets(tickets, 25)
-    } 
+    printTickets(allTickets)
+
+    while (true) {
+        var input = getInput("\nPlease Choose an option:\n"
+            + "1) Next Page\n"
+            + "2) Previous Page\n"
+            + "3) Back to Menu\n")
+        switch (input) {
+            case "1": if (numTickets > currPage * 25) {
+                const nextPageTickets = await retrieveTicketsSpecificPage(++currPage)
+                printTickets(nextPageTickets)
+            }
+            else {
+                console.log("\n No more pages!")
+            }
+                break;
+            case "2": if (currPage > 0) {
+                const prevPageTickets = await retrieveTicketsSpecificPage(--currPage)
+                printTickets(prevPageTickets)
+            }
+            else {
+                console.log("\n Page must be greater than 0!")
+            }
+                break;
+            case "3": return;
+        }
+    }
 }
 
-export const formatTicket = function (ticket) {
-    const id =  ticket.ticket.id
-    const created_at = ticket.ticket.created_at
-    const description = ticket.ticket.description
-    const submitter_id = ticket.ticket.submitter_id
-    const subject = ticket.ticket.subject
+export const formatTicket = function (singleTicket) {
+    const id = singleTicket.ticket.id
+    const created_at = singleTicket.ticket.created_at
+    const description = singleTicket.ticket.description
+    const submitter_id = singleTicket.ticket.submitter_id
+    const subject = singleTicket.ticket.subject
 
-    const output = `Ticket ID: ${id} \nSubmitter: ${submitter_id} \nCreated at: ${created_at} \nDescription: ${description}\n`
+    const output = `\nTicket ID: ${id} \nSubmitter: ${submitter_id} \nCreated at: ${created_at} \nSubject: ${subject} \nDescription: ${description}\n`
     console.log(output)
 }
 
-function printTickets (tickets, numTickets) {
-
-    for (var i = 0; i < numTickets; i++){
-        const id =  tickets.tickets[i].id
-        const created_at = tickets.tickets[i].created_at
-        const subject = tickets.tickets[i].subject
-        const submitter_id = tickets.tickets[i].submitter_id
+function printTickets(allTickets) {
+    for (var ticket of allTickets.tickets) {
+        const id = ticket.id
+        const created_at = ticket.created_at
+        const subject = ticket.subject
+        const submitter_id = ticket.submitter_id
         console.log(`Ticket ID: ${id} || Created at: ${created_at} || Submitter: ${submitter_id} || Subject: ${subject}`)
     }
 }
