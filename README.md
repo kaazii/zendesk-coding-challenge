@@ -22,7 +22,7 @@ For this program, I need to be get familiar with the Zendesk API. The requiremen
 ```
  $ git clone https://github.com/kaazii/zendesk-coding-challenge
 ```
-2. Run this command to install all of the modules I used.
+2. Run this command to install all of the modules you will need:
 ```
 $ npm install
 ```
