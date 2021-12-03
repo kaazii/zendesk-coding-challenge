@@ -43,6 +43,6 @@ $ npm test
 - `formatter.js` Finally, this file is responsible for parsing the tickets and outputting them to the console.
 
 # Conclusion
-I am extremely proud of how much I have grown from this coding experience. I chose a language that I was not familiar with, and was able to create a program that satisfied *most* of the requirements. I feel that I could have done better with making my code more testable from the get-go. However, I will take this as a learning experience and try to improve on my coding skills going forward.
+I am extremely proud of how much I have grown from this coding experience. I chose a language that I was not familiar with, and was able to create a program that satisfied the requirements. I feel that I could have done better with making my code more testable from the get-go. However, I will take this as a learning experience and try to improve on my coding skills going forward. All things considered, I am very happy with the final product.
 
 Thank you Zendesk for this opportunity, I thoroughly enjoyed this experience!
