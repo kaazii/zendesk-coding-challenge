@@ -2,7 +2,7 @@
 This is my submission for the 2022 Zendesk Coding Challenge. I chose to use Node.js to further challenge my self because it's not something that I'm very familiar with. 
 
 # Brief Overview
-Zendesk is a company that focuses on customer service. From my understanding, if you have a domain with zendesk, customers can submit tickets with issues that they may be facing. That's where their API comes in. I created my own domain and populated it with dummy tickets. Then, I use their API to fetch those tickets and allow users to interact with them on a basic level.
+Zendesk is a company that focuses on customer service. From my understanding, if you have a domain with Zendesk, customers can submit tickets with issues that they may be facing. That's where their API comes in. I created my own domain and populated it with dummy tickets. Then, I use their API to fetch those tickets and allow users to interact with them on a basic level.
 
 # Task
 For this challenge, I needed to become familiar with the Zendesk API. The requirements are pretty straight forward:
